@@ -11,18 +11,22 @@
 
   <body>
     <header>
+      <nav>
       <h1>
         <%= link_to root_path do %> 
           <%= image_tag "bien-logo.svg" %>
         <% end %> 
       </h1>
+      </nav>
       <h2>The best reivews in the world</h2>
       <nav>
         <%= link_to "Add a review", new_review_path%>
       </nav>
     </header>
-
+    <main>
     <%= yield %>
+    </main>
+    
     <footer>
       Copywrite 2020 Bien reviews
     </footer>
