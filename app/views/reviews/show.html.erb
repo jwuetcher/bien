@@ -1,7 +1,15 @@
+<% content_for :page_title, @review.title %>
+
 <h1><%= @review.title %></h1>
 <div class="score">
     <%= @review.score%>/10
 </div>
+
+<% if @review.ambiance.present?%>
+    <div class="ambiance">
+        Ambiance is: <%= @review.ambiance%>
+    </div>
+<%end%>
 
 <div class="body">
     <%= simple_format @review.body%>

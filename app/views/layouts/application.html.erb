@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bien Reviews</title>
+    <title> <%= content_for :page_title %> - Bien Reviews -</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,7 +26,7 @@
     <main>
     <%= yield %>
     </main>
-    
+
     <footer>
       Copywrite 2020 Bien reviews
     </footer>
