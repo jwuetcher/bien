@@ -1,6 +1,7 @@
 <% content_for :page_title, @review.title %>
 
-<h1><%= @review.title %></h1>
+<h1><%= @review.restaurant %></h1>
+<h2><%= @review.title %></h2>
 <div class="score">
     <%= @review.score%>/10
 </div>
@@ -8,6 +9,18 @@
 <% if @review.ambiance.present?%>
     <div class="ambiance">
         Ambiance is: <%= @review.ambiance%>
+    </div>
+<%end%>
+
+<% if @review.price.present?%>
+    <div class="price">
+        Price: <%= @review.price%>
+    </div>
+<%end%>
+
+<% if @review.cuisine.present?%>
+    <div class="cuisine">
+       cusine: <%= @review.cuisine%>
     </div>
 <%end%>
 
